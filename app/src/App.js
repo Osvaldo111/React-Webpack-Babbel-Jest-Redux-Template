@@ -1,10 +1,12 @@
 import React from "react";
 import "../style/index.scss";
+import Component from "./components/componentExm";
 
 function App() {
   return (
     <div>
-      <div>Hello World</div>
+      <div>Hello</div>
+      <Component />
     </div>
   );
 }
