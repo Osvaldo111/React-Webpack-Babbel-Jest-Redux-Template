@@ -5,7 +5,8 @@ module.exports = {
   entry: "./app/src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "index_bundle.js"
+    filename: "index_bundle.js",
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -15,6 +16,9 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   mode: "development",
   plugins: [

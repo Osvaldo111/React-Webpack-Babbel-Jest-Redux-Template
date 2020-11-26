@@ -1,13 +1,29 @@
 import React from "react";
 import "../style/index.scss";
-import Component from "./components/componentExm";
+import { Activity, NotFound }  from "./Pages";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div>
-      <div>Hello</div>
-      <Component />
-    </div>
+    <Router>
+        <Switch>
+          <Route path="/results">
+            <div>Results</div>
+          </Route>
+          <Route exact path="/">
+            <Activity />
+          </Route>
+          <Route >
+            <NotFound />
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 export default App;
